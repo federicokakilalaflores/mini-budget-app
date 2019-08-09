@@ -1,0 +1,51 @@
+.wrapper{
+    max-width: 100%;
+    width: 1100px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.text-center{
+    text-align: center;
+}
+
+//text-color
+.text-success{
+    color: $color-success;
+} 
+
+.text-danger{
+    color: $color-danger;
+}
+
+.text-warning{
+    color: $color-warning;
+}
+
+.alert{
+    padding: 7px 12px;
+    background-color: #ddd;
+    text-align: center;
+    color: $offBlack;
+    font-weight: bold;
+
+    &.alert-muted{
+        background-color:  $color-muted;
+        color: $offBlack;  
+    }
+
+    &.alert-success{
+        background-color:  $color-success;
+        color: $offWhite; 
+    }
+
+    &.alert-danger{
+        background-color:  $color-danger;
+        color: $offWhite; 
+    }
+
+    &.alert-warning{
+        background-color:  $color-warning;
+        color: $offWhite; 
+    }
+}

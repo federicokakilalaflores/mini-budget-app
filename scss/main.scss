@@ -1,0 +1,87 @@
+//variables
+@import 'libs/variables';
+// reset style
+@import 'libs/reset';
+// gridset style
+@import 'libs/gridset';
+// reusable mixins style
+@import 'libs/mixins';
+// base design for inputs
+@import 'components/base/inputs';
+// base design for buttons
+@import 'components/base/buttons';
+//global style
+@import 'views/globals'; 
+
+body{
+    background-color: $offBlack;
+    color: $offWhite;
+}
+
+div.perfect-center{ 
+   margin-top: 20vh;
+}
+
+header{
+    color: $offWhite;
+    padding: 1rem;
+
+    span:nth-child(1){
+        border-bottom: 5px solid $secondary-color;
+        span{
+            color: $primary-color;
+        }
+    }
+}
+
+footer{
+    color: $offWhite;
+    padding: 1rem;
+    font-size: 0.8rem;
+    background-color: #111;
+    border-radius: 4px;
+    text-align: center;
+}
+
+
+div.form-box{
+    background-color: $offWhite;
+    padding: 1rem; 
+    margin: 1rem 0;
+    border-radius: 5px;
+    border: 3px solid $secondary-color;
+
+    .label{
+        color: $offBlack;
+    }
+
+}
+
+h3, h4{
+    text-transform: uppercase;
+}
+
+div.icon{
+    margin: 10px 0;
+    
+    & i.fa{
+        color: $secondary-color;
+        font-size: 1.6rem;
+    }
+}
+
+.amount{
+    font-size: 1.8rem; 
+}
+
+.action{
+    margin: 1rem 0;
+
+    & i.fa{
+        margin: 0 3px;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}

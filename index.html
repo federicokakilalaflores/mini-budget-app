@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+    <title>Budget App</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="perfect-center">
+
+            <header>
+                <h1><span>BUDGET <span>APP</span></span></h1>
+            </header>
+            <div class="col-4">
+                <div class="form-box">
+                    <div class="input-block">
+                        <label class="label">Enter your Budget:</label>
+                        <input type="number" name="budget" min="0" id="budget" value="0">
+                    </div>
+                
+                    <button type="button" class="btn btn-primary" id="addBudget">Submit</button>
+                </div>
+                <div class="form-box">
+                    <div class="input-block">
+                        <label class="label">Enter your Expense Title:</label>
+                        <input type="text" id="expenseTitle" placeholder="eg. Rent">
+                    </div>
+                    <div class="input-block">
+                        <label class="label">Enter your Expense Amount</label>
+                        <input type="number" id="expenseAmount" min="0" value="0">  
+                    </div>
+                    
+                    <button class="btn btn-primary" id="addExpense">Add Expense</button> 
+                </div>
+            </div>
+
+            <div class="col-8"> 
+                <div class="row">
+                    <div class="col-4 text-center">
+                        <h3>Budget</h3>
+                        <div class="icon"><i class="fa fa-money">&#xf0d6;</i></div>
+                        <div class="amount text-success">PHP 7500</div> 
+                    </div>
+                    <div class="col-4 text-center">
+                        <h3>Total Expenses</h3>
+                        <div class="icon"><i class="fa fa-credit-card"></i></div>
+                        <div class="amount text-danger">PHP 7500</div>
+                    </div>
+                    <div class="col-4 text-center">
+                        <h3>Balance</h3>
+                        <div class="icon"><i class="fa fa-dollar">&#xf155;</i></div>
+                        <div class="amount text-success">PHP 7500</div>
+                    </div>   
+                </div>
+
+                <div class="row" id="expList">
+                    <div id="errorMsg"><div></div></div>
+                    <div class="col-4 text-center exp-col">
+                        <h4>Expense Title</h4>
+        
+                    </div>
+                    <div class="col-4 text-center exp-col">
+                        <h4>Expenses Value</h4>
+                    </div>
+                    <div class="col-4 text-center action-col"> 
+                        <h4>Action</h4>
+                       
+                    </div>
+                </div>     
+                <footer>&copy; Copyright 2019, Budget App | Federico Flores Jr.</footer>        
+            </div>
+            
+        </div>
+    </div> 
+    <script src="js/main.js"></script>   
+</body>
+</html>

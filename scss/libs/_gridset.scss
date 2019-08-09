@@ -1,0 +1,13 @@
+@for $i from 1 to 12 {
+    .col-#{$i} {
+        width: 8.33% * $i;  
+        float: left;
+        padding: 15px; 
+    }    
+} 
+
+div.row::after{  
+    content: "";
+    display: table; 
+    clear: both;    
+} 
