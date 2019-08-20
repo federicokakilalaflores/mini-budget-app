@@ -20,18 +20,43 @@ budgetApp.clearFields = function() {
     this.expAmountInput.value = 0;
 }
 
+
+budgetApp.validateForm = function(inp, type) {
+    if(type === "number"){
+        if(inp.validity.typeMismatch || inp.validity.rangeUnderflow || 
+        inp.validity.rangeUnderflow || inp.validity.valueMissing){
+            return false;
+        }
+    }
+
+    if(type === "text"){
+        if(inp.validity.valueMissing || inp.validity.tooLong){
+            return false
+        }
+    }
+
+    return true;
+}
+
+
 /* BUDGET GOES HERE */
 budgetApp.addBudget = function(){
-    localStorage.setItem("budget", this.budgetInput.value);
-    this.displayBudget(); 
-    this.displayTotalExpenseAmnt();
-    this.displayComputedBalance();
-    this.clearFields();
-    this.errorMsg("Your budget updated successfully!", "success");
+    if(this.validateForm(this.budgetInput, "number")){
+        localStorage.setItem("budget", this.budgetInput.value);
+        this.displayBudget(); 
+        this.displayTotalExpenseAmnt();
+        this.displayComputedBalance();
+        this.clearFields();
+        this.errorMsg("Your budget updated successfully!", "success");
+    }else{
+        this.errorMsg("Please fill up the fields and check your inputs", "danger");
+    }
 }
 
 budgetApp.displayBudget = function(){
-    document.getElementById("myBudget").innerHTML = "PHP " + localStorage.getItem("budget");
+    let budget =  localStorage.getItem("budget");
+    (budget === null || budget == "") ? budget = 0 : true;
+    document.getElementById("myBudget").innerHTML = "PHP " + budget;
 }
 
 /* EXPENSES GOES HERE */
@@ -43,12 +68,17 @@ budgetApp.checkExpenseExistence = function(){
         if (this.expenses.hasOwnProperty(this.expTitleInput.value.toUpperCase())) {
             this.errorMsg("The Expense Title you input is already exist!", "warning");
         }else{
-            this.addExpenses();
-            this.appendExpenses(); 
-            this.displayTotalExpenseAmnt();
-            this.displayComputedBalance();
-            this.clearFields();
-            this.errorMsg("Expense added successfully!", "success");
+
+            if(this.validateForm(this.expTitleInput, "text") && this.validateForm(this.expAmountInput, "number")){
+                this.addExpenses();
+                this.appendExpenses(); 
+                this.displayTotalExpenseAmnt();
+                this.displayComputedBalance();
+                this.clearFields();
+                this.errorMsg("Expense added successfully!", "success");
+            }else{
+                this.errorMsg("Please fill up the fields and check your inputs", "danger");
+            }
         }
 }
 

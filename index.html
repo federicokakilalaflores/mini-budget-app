@@ -19,7 +19,7 @@
                 <div class="form-box">
                     <div class="input-block">
                         <label class="label">Enter your Budget:</label>
-                        <input type="number" name="budget" min="0" id="budget" value="0">
+                        <input type="number" name="budget" min="1" max="1000000" id="budget" value="0" required>
                     </div>
                 
                     <button type="button" class="btn btn-primary" id="addBudget">Submit</button>
@@ -27,11 +27,11 @@
                 <div class="form-box">
                     <div class="input-block">
                         <label class="label">Enter your Expense Title:</label>
-                        <input type="text" id="expenseTitle" placeholder="eg. Rent">
+                        <input type="text" id="expenseTitle" maxlength="20" placeholder="eg. Rent" required>
                     </div>
                     <div class="input-block">
                         <label class="label">Enter your Expense Amount</label>
-                        <input type="number" id="expenseAmount" min="0" value="0">  
+                        <input type="number" id="expenseAmount" min="1" max="1000000" value="0" required>  
                     </div>
                     
                     <button class="btn btn-primary" id="addExpense">Add Expense</button> 
