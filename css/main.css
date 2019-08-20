@@ -139,6 +139,7 @@ div.row::after {
   text-align: center;
   color: #222;
   font-weight: bold;
+  border-radius: 3px;
 }
 .alert.alert-muted {
   background-color: #bbb;
