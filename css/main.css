@@ -164,15 +164,13 @@ body {
 }
 
 div.perfect-center {
-  margin-top: 20vh;
+  margin-top: 10vh;
 }
 
 header {
   color: #ddd;
   padding: 1rem;
-}
-header span:nth-child(1) {
-  border-bottom: 5px solid #40efd5;
+  margin-bottom: 1.5rem;
 }
 header span:nth-child(1) span {
   color: #41a5f2;
@@ -198,8 +196,17 @@ div.form-box .label {
   color: #222;
 }
 
-h3, h4 {
+h3, th {
   text-transform: uppercase;
+}
+
+#expList {
+  width: 100%;
+}
+#expList td, #expList th {
+  text-align: center;
+  padding: 10px;
+  width: 33.3%;
 }
 
 div.icon {

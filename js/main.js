@@ -98,8 +98,7 @@ budgetApp.appendExpenses =function(){
     let para2 = document.createElement("p");
     para1.setAttribute("class", this.expTitleInput.value.toUpperCase());
     para2.setAttribute("class", this.expTitleInput.value.toUpperCase());
-    let action = ` <div class="action ${this.expTitleInput.value.toUpperCase()}">
-        <i class="fa fa-edit text-warning" data-key="${this.expTitleInput.value.toUpperCase()}"></i>    
+    let action = ` <div class="action ${this.expTitleInput.value.toUpperCase()}"> 
         <i class="fa fa-trash text-danger" data-key="${this.expTitleInput.value.toUpperCase()}"></i>    
         </div>`;
 
@@ -160,8 +159,7 @@ budgetApp.displayExpensesOnLoad =function(){
         let para2 = document.createElement("p");
         para1.setAttribute("class", x);
         para2.setAttribute("class", x);
-         let action = ` <div class="action ${x}">
-            <i class="fa fa-edit text-warning" data-key="${x}"></i>    
+         let action = ` <div class="action ${x}"> 
             <i class="fa fa-trash text-danger" data-key="${x}"></i>     
             </div>`;
         para1.innerHTML = x;  
